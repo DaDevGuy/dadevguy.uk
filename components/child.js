@@ -20,7 +20,7 @@ const ChildCard = () => {
   return (
     <div className={styles.card}>
       <div className={styles.profileSection}>
-        <img src="/pfp/pfp.png" alt="Profile" className={styles.profileImage} />
+        <img src="/pfp/pfp.gif" alt="Profile" className={styles.profileImage} />
         <h3 className={styles.username}>@gabepaki</h3>
       </div>
       <p>"{quote}"</p>

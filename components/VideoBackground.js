@@ -33,7 +33,7 @@ const VideoBackground = () => {
       </video>
       <div className={`${styles.content} tilt-container`}>
       <div className={styles.profileImage}>
-    <img src="/pfp/pfp.png" alt="Profile" className={styles.profileImage} />
+    <img src="/pfp/pfp.gif" alt="Profile" className={styles.profileImage} />
 
   </div>
   <div className={`${styles.name}`}>
