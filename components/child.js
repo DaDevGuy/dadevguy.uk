@@ -22,6 +22,16 @@ const ChildCard = () => {
       <div className={styles.profileSection}>
         <img src="/pfp/pfp.gif" alt="Profile" className={styles.profileImage} />
         <h3 className={styles.username}>@gabepaki</h3>
+        <div className={styles.badgeContainer}>
+          <div className={styles.tooltip}>
+            <img src="/dev.svg" alt="Steam" className={styles.badge} />
+            <span className={styles.tooltiptext}>Active Developer</span>
+          </div>
+          <div className={styles.tooltip}>
+            <img src="/brilliance.svg" alt="Brilliance" className={styles.badgeb} />
+            <span className={styles.tooltiptext}>HypeSquad Brilliance</span>
+          </div>
+        </div>
       </div>
       <p>"{quote}"</p>
       <a href="https://discord.com/users/1177943732402790501" target="_blank" rel="noopener noreferrer" className={styles.button}>Add on Discord</a>
