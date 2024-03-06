@@ -31,6 +31,10 @@ const ChildCard = () => {
             <img src="/brilliance.svg" alt="Brilliance" className={styles.badgeb} />
             <span className={styles.tooltiptext}>HypeSquad Brilliance</span>
           </div>
+          <div className={styles.tooltip}>
+            <img src="/nitro.svg" alt="Nitro Subscriber" className={styles.badgeb} />
+            <span className={styles.tooltiptext}>Subscriber since 6 Mar 2024</span>
+          </div>
         </div>
       </div>
       <p>"{quote}"</p>

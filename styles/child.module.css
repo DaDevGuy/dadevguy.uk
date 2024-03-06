@@ -39,10 +39,12 @@
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    opacity: 50%;
   }
   
   .button:hover {
-    background-color: #000000;
+    background-color: #070d0e;
+    opacity: 100%;
   }
   
   @media (max-width: 600px) {
@@ -58,14 +60,16 @@
     }
   
     .username {
-      font-size: 14px; 
+      font-size: 15px; 
+
     }
   }
 
   .badgeb {
     margin: auto;
-    width: 23px;
-    padding: 10%;
+    width: 22px;
+    padding: 13%;
+    height: 22px;
   }
   
 
