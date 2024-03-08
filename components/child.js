@@ -25,13 +25,13 @@ const ChildCard = () => {
         <img src="/pfp/pfp1.png" alt="Profile" className={styles.profileImage} />
         <h3 className={cx(styles.username, 'text-white', 'text-base')}>@gabepaki</h3>
         <div className={styles.badgeContainer}>
+        <div className={styles.tooltip}>
+            <img src="/brilliance.svg" alt="Brilliance" className={styles.badgeb} />
+            <span className={styles.tooltiptext}>HypeSquad Brilliance</span>
+          </div>
           <div className={styles.tooltip}>
             <img src="/dev.svg" alt="Steam" className={styles.badge} />
             <span className={styles.tooltiptext}>Active Developer</span>
-          </div>
-          <div className={styles.tooltip}>
-            <img src="/brilliance.svg" alt="Brilliance" className={styles.badgeb} />
-            <span className={styles.tooltiptext}>HypeSquad Brilliance</span>
           </div>
           <div className={styles.tooltip}>
             <img src="/nitro.svg" alt="Nitro Subscriber" className={styles.badgeb} />
