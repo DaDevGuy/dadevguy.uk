@@ -5,14 +5,13 @@ import styles from '../styles/styles.module.css';
 import ChildCard from './child';
 
 const VideoBackground = () => {
-
   const [copySuccess, setCopySuccess] = useState('');
 
   useEffect(() => {
     const tiltContainer = document.querySelector('.tilt-container');
     window.onload = function () {
-        document.getElementById('video-bg').play();
-    }
+      document.getElementById('video-bg').play();
+    };
 
     if (tiltContainer) {
       VanillaTilt.init(tiltContainer, {
@@ -29,11 +28,11 @@ const VideoBackground = () => {
   }, []);
 
   const copyBitcoinAddress = () => {
-    const bitcoinAddress = 'bc1qu32ptqt6s04pret8n936z65cs85z2xe79csx3t'; 
+    const bitcoinAddress = 'bc1qu32ptqt6s04pret8n936z65cs85z2xe79csx3t';
     navigator.clipboard.writeText(bitcoinAddress)
       .then(() => {
         setCopySuccess('Copied!');
-        setTimeout(() => setCopySuccess(''), 2000); 
+        setTimeout(() => setCopySuccess(''), 2000);
       })
       .catch(err => console.error('Error copying Bitcoin address:', err));
   };
@@ -51,24 +50,26 @@ const VideoBackground = () => {
         <div className={styles.name}>
           <h3>DaDevGuy</h3>
         </div>
-<div className={styles.socialIcons}>
-  <a href="https://github.com/DaDevGuy" target="_blank" rel="noopener noreferrer" className={styles.tooltip}>
-    <img src="/github.svg" alt="GitHub" className={styles.icon} />
-    <span className={styles.tooltipText}>GitHub</span>
-  </a>
-  <div className={`${styles.tooltip}`}>
-  <button onClick={copyBitcoinAddress} className={styles.iconButton} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}>
-    <img src="/bitcoin.svg" alt="BitCoin" className={styles.icon} />
-    <span className={styles.tooltipText}>{copySuccess || "Bitcoin Address"}</span>
-  </button>
-</div>
-
-  <a href="https://steamcommunity.com/profiles/76561199562233428/" target="_blank" rel="noopener noreferrer" className={styles.tooltip}>
-    <img src="/steam.svg" alt="Steam" className={styles.icon} />
-    <span className={styles.tooltipText}>Steam</span>
-  </a>
-</div>
-
+        <div className={styles.socialIcons}>
+          <a href="https://github.com/DaDevGuy" target="_blank" rel="noopener noreferrer" className={styles.tooltip}>
+            <img src="/github.svg" alt="GitHub" className={styles.icon} />
+            <span className={styles.tooltipText}>GitHub</span>
+          </a>
+          <div className={`${styles.tooltip}`}>
+            <button onClick={copyBitcoinAddress} className={styles.iconButton} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}>
+              <img src="/bitcoin.svg" alt="BitCoin" className={styles.icon} />
+              <span className={styles.tooltipText}>{copySuccess || "Bitcoin Address"}</span>
+            </button>
+          </div>
+          <a href="https://steamcommunity.com/profiles/76561199562233428/" target="_blank" rel="noopener noreferrer" className={styles.tooltip}>
+            <img src="/steam.svg" alt="Steam" className={styles.icon} />
+            <span className={styles.tooltipText}>Steam</span>
+          </a>
+          <a href='https://paypal.me/ehank1' target='_blank' rel='noopener noreferrer' className={styles.tooltip}>
+            <img src="/paypal.svg" alt="PayPal" className={styles.icon} />
+            <span className={styles.tooltipText}>PayPal</span>
+          </a>
+        </div>
         <ChildCard />
       </div>
     </div>
