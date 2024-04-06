@@ -61,6 +61,12 @@ const ChildCard = () => {
             <span className={styles.tooltiptext}>Subscriber since 6 Mar 2024</span>
           </div>
             </div>
+
+  <div className={styles.tooltip}>
+    <img src="/clown.png" alt="Clown" className={styles.badgec} />
+    <span className={styles.tooltiptext}>A clown, for a limited time</span>
+  </div>
+
           </>
         )}
       </div>

@@ -71,6 +71,14 @@
     padding: 13%;
     height: 22px;
   }
+
+  .badgec {
+    margin: auto;
+    width: 28px;
+    padding: 9%;
+    height: 28px;
+    position: relative; bottom: 3px;
+  }
   
 
   .tooltip {
