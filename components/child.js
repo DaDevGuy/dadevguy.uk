@@ -57,7 +57,7 @@ const ChildCard = () => {
                 </div>
               )}
                         <div className={styles.tooltip}>
-            <img src="/nitro.svg" alt="Nitro Subscriber" className={styles.badgeb} />
+            <img src="/nitro.svg" alt="Nitro Subscriber" className={styles.badgen} />
             <span className={styles.tooltiptext}>Subscriber since 6 Mar 2024</span>
           </div>
             </div>
