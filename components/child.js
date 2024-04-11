@@ -62,10 +62,10 @@ const ChildCard = () => {
           </div>
             </div>
 
-  <div className={styles.tooltip}>
+  {/* <div className={styles.tooltip}>
     <img src="/clown.png" alt="Clown" className={styles.badgec} />
     <span className={styles.tooltiptext}>A clown, for a limited time</span>
-  </div>
+  </div> */}
 
           </>
         )}
