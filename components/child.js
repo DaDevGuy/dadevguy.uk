@@ -25,7 +25,15 @@ const ChildCard = () => {
     fetch(process.env.NEXT_PUBLIC_API_URL)
       .then(response => response.json())
       .then(data => {
-        setUserData(data.data); 
+        const userData = {
+          id: data.id,
+          username: data.username,
+          pfp: data.avatar.link,
+          badges: data.badges,
+          nitro: false // Placeholder, as the provided sample response does not include Nitro information
+          // Add other properties as needed
+        };
+        setUserData(userData); 
       })
       .catch(error => console.error('Error fetching Discord data:', error));
   };
@@ -56,17 +64,15 @@ const ChildCard = () => {
                   <span className={styles.tooltiptext}>Nitro Subscriber since 6 Mar 2024</span>
                 </div>
               )}
-                        <div className={styles.tooltip}>
-            <img src="/nitro.svg" alt="Nitro Subscriber" className={styles.badgen} />
-            <span className={styles.tooltiptext}>Subscriber since 6 Mar 2024</span>
-          </div>
+              <div className={styles.tooltip}>
+                <img src="/nitro.svg" alt="Nitro Subscriber" className={styles.badgen} />
+                <span className={styles.tooltiptext}>Subscriber since 6 Mar 2024</span>
+              </div>
             </div>
-
-  <div className={styles.tooltip}>
-    <img src="/m1.svg" alt="Clown" className={styles.badgec} />
-    <span className={styles.tooltiptext}>Server Boosting since 7 April 2024</span>
-  </div>
-
+            <div className={styles.tooltip}>
+              <img src="/m1.svg" alt="Clown" className={styles.badgec} />
+              <span className={styles.tooltiptext}>Server Boosting since 7 April 2024</span>
+            </div>
           </>
         )}
       </div>
