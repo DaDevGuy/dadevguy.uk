@@ -6,6 +6,7 @@ import ChildCard from './child';
 
 const VideoBackground = () => {
   const [copySuccess, setCopySuccess] = useState('');
+  const [isOverlayVisible, setIsOverlayVisible] = useState(true);
 
   useEffect(() => {
     const tiltContainer = document.querySelector('.tilt-container');
@@ -27,6 +28,14 @@ const VideoBackground = () => {
     }
   }, []);
 
+  const handleOverlayClick = () => {
+    const video = document.getElementById('video-bg');
+    if (video) {
+      video.muted = false;
+    }
+    setIsOverlayVisible(false);
+  };
+
   const copyBitcoinAddress = () => {
     const bitcoinAddress = 'bc1qu32ptqt6s04pret8n936z65cs85z2xe79csx3t';
     navigator.clipboard.writeText(bitcoinAddress)
@@ -43,6 +52,11 @@ const VideoBackground = () => {
         <source src="/media/video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      {isOverlayVisible && (
+        <div className={styles.overlay} onClick={handleOverlayClick}>
+          <h1>Click to Enter</h1>
+        </div>
+      )}
       <div className={`${styles.content} tilt-container`}>
         <div className={styles.profileImage}>
           <img src="/pfp/pfp.gif" alt="Profile" className={styles.profileImage} />
